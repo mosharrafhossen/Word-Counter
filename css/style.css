@@ -1,0 +1,165 @@
+:root {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --primary: #3b82f6;
+    --shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: var(--card);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+}
+
+/* ===== Header ===== */
+.top-bar {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    align-items: center;
+}
+
+.top-bar h2 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ===== Buttons ===== */
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .15s ease, opacity .15s ease;
+    color: white;
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+button:hover {
+    opacity: .9;
+}
+
+.lang-btn { background: var(--primary); }
+.dark-btn { background: #334155; }
+.copy-btn { background: var(--success); }
+.clear-btn { background: var(--danger); }
+
+/* ===== Textarea ===== */
+textarea {
+    width: 100%;
+    height: 160px;
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: rgba(0,0,0,.03);
+    font-size: 15px;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    color: var(--text);
+}
+
+body.dark textarea {
+    background: rgba(255,255,255,.06);
+}
+
+textarea:focus {
+    border-color: var(--primary);
+}
+
+/* ===== Action Buttons ===== */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* ===== Stats ===== */
+.stats {
+    margin-top: 18px;
+    background: rgba(0,0,0,.03);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+body.dark .stats {
+    background: rgba(255,255,255,.05);
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed rgba(0,0,0,.1);
+}
+
+body.dark .stat {
+    border-bottom-color: rgba(255,255,255,.15);
+}
+
+.stat:last-child {
+    border-bottom: none;
+}
+
+.stat span:last-child {
+    font-weight: 700;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+    .top-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .top-bar h2 {
+        grid-column: 1 / -1;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    textarea {
+        height: 130px;
+    }
+}

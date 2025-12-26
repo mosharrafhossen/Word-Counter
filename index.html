@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter App</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="container">
+
+    <div class="top-bar">
+        <h2 id="title">Word Counter App</h2>
+        <button id="langBtn" class="lang-btn">বাংলা</button>
+        <button id="darkBtn" class="dark-btn">🌙</button>
+    </div>
+
+    <textarea id="textInput" placeholder="Type here..."></textarea>
+
+    <div class="buttons">
+        <button id="copyBtn" class="copy-btn">Copy</button>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+    </div>
+
+    <div class="stats">
+        <div class="stat"><span id="wLabel">Words</span><span id="wordCount">0</span></div>
+        <div class="stat"><span id="cLabel">Characters</span><span id="charCount">0</span></div>
+        <div class="stat"><span id="sLabel">Sentences</span><span id="sentenceCount">0</span></div>
+        <div class="stat"><span id="pLabel">Paragraphs</span><span id="paragraphCount">0</span></div>
+        <div class="stat"><span id="rLabel">Reading Time</span><span id="readingTime">0 min</span></div>
+    </div>
+
+</div>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
